@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-color: hsl(226, 43%, 10%);
+      font-family: 'Rubik', sans-serif;
+    }
+    * {
+      color: white;
+    }
+    .parent-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .grid-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 15px;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      width: 200px;
+      background-color: hsl(235, 46%, 20%);
+      border-radius: 11px;
+    }
+    .item * {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .report {
+      grid-row: span 2;
+      height: auto;
+    }
+    .report-top-layer {
+      flex: 3.5;
+      background-color: hsl(246, 80%, 60%);
+      border-radius: 11px;
+    }
+    .time-intervals {
+      flex: 2;
+      display: flex;
+      align-items: center;
+    }
+    .time {
+      list-style: none;
+    }
+    .time li {
+      margin-bottom: 10px;
+    }
+    .dp {
+      padding-top: 20px;
+      height: 70px;
+      width: 70px;
+    }
+
+    /* Activity Box */
+    .activity-background-layer {
+      flex: 1;
+      position: relative;
+    }
+    .background-image {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .activity-top-layer {
+      flex: 4;
+      background-color: hsl(235, 46%, 20%);
+      border-radius: 9px;
+      padding-top: 10px;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .record {
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .activity-record-time {
+      font-size: 40px;
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+    .work {
+      background-color: hsl(15, 100%, 70%);
+    }
+    .play {
+      background-color: hsl(195, 74%, 62%);
+    }
+    .study {
+      background-color: hsl(348, 100%, 68%);
+    }
+    .exercise {
+      background-color: hsl(145, 58%, 55%);
+    }
+    .social {
+      background-color: hsl(264, 64%, 52%);
+    }
+    .self-care {
+      background-color: hsl(43, 84%, 65%);
+    }
+
+    @media(max-width: 375px) {
+      .parent-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 15px;
+      }
+      .report {
+        grid-row: span 1;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="parent-container">
+    <div class="grid-container">
+      <div class="report item">
+        <div class="report-top-layer">
+          <img class="dp" src="./images/image-jeremy.png" alt="">
+          <div style="margin-top: 32px;">Report for</div>
+          <div style="font-size: 35px;">Jeremy Robson</div>
+        </div>
+        <div class="time-intervals">
+          <ul class="time">
+            <li>Daily</li>
+            <li>Weekly</li>
+            <li>Monthly</li>
+          </ul>
+        </div>
+        
+        
+      </div>
+      <div class="work item">
+        <div class="activity-background-layer">
+            <img class="background-image" src="./images/icon-work.svg" alt="">
+        </div>
+        <div class="activity-top-layer">
+          <div class="top-bar">
+            <div>Work</div>
+            <div><img src="./images/icon-ellipsis.svg" alt=""></div>
+          </div>
+          <div class="record">
+            <div class="activity-record-time">32.00hrs</div>
+            <div>Last Week - 36hrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="play item">
+        <div class="activity-background-layer">
+          <img class="background-image" src="./images/icon-play.svg" alt="">
+        </div>
+        <div class="activity-top-layer">
+          <div class="top-bar">
+            <div>Work</div>
+            <div><img src="./images/icon-ellipsis.svg" alt=""></div>
+          </div>
+          <div class="record">
+            <div class="activity-record-time">32.00hrs</div>
+            <div>Last Week - 36hrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="study item">
+        <div class="activity-background-layer">
+          <img class="background-image" src="./images/icon-study.svg" alt="">
+        </div>
+        <div class="activity-top-layer">
+          <div class="top-bar">
+            <div>Work</div>
+            <div><img src="./images/icon-ellipsis.svg" alt=""></div>
+          </div>
+          <div class="record">
+            <div class="activity-record-time">32.00hrs</div>
+            <div>Last Week - 36hrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercise item">
+        <div class="activity-background-layer">
+          <img class="background-image" src="./images/icon-exercise.svg" alt="">
+        </div>
+        <div class="activity-top-layer">
+          <div class="top-bar">
+            <div>Work</div>
+            <div><img src="./images/icon-ellipsis.svg" alt=""></div>
+          </div>
+          <div class="record">
+            <div class="activity-record-time">32.00hrs</div>
+            <div>Last Week - 36hrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social item">
+        <div class="activity-background-layer">
+          <img class="background-image" src="./images/icon-social.svg" alt="">
+        </div>
+        <div class="activity-top-layer">
+          <div class="top-bar">
+            <div>Work</div>
+            <div><img src="./images/icon-ellipsis.svg" alt=""></div>
+          </div>
+          <div class="record">
+            <div class="activity-record-time">32.00hrs</div>
+            <div>Last Week - 36hrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="self-care item">
+        <div class="activity-background-layer">
+          <img class="background-image" src="./images/icon-self-care.svg" alt="">
+        </div>
+        <div class="activity-top-layer">
+          <div class="top-bar">
+            <div>Work</div>
+            <div><img src="./images/icon-ellipsis.svg" alt=""></div>
+          </div>
+          <div class="record">
+            <div class="activity-record-time">32.00hrs</div>
+            <div>Last Week - 36hrs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Abhishek Biswas</a>.
+  </div>
+</body>
+</html>
