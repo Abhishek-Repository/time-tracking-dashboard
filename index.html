@@ -13,7 +13,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center;}
     .attribution a { color: hsl(228, 45%, 44%); }
     body {
       background-color: hsl(226, 43%, 10%);
@@ -54,6 +54,10 @@
       flex: 3.5;
       background-color: hsl(246, 80%, 60%);
       border-radius: 11px;
+      padding-top: 20px;
+    }
+    .report-top-layer * {
+      /* padding-left: 10px; */
     }
     .time-intervals {
       flex: 2;
@@ -67,9 +71,12 @@
       margin-bottom: 10px;
     }
     .dp {
-      padding-top: 20px;
+      padding: 0px;
+      margin-left: 5px;
       height: 70px;
       width: 70px;
+      border-radius: 50%;
+      border: 2px solid white;
     }
 
     /* Activity Box */
@@ -127,21 +134,18 @@
       background-color: hsl(43, 84%, 65%);
     }
 
-    @media(max-width: 375px) {
+    @media screen and (max-width: 375px) {
       .parent-container{
-      display: flex;
+      display: grid;
       justify-content: center;
       align-items: center;
+      height: 100vh;
     }
       .grid-container {
-        display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        gap: 15px;
       }
-      .report {
-        grid-row: span 1;
-        height: auto;
+      .attribution {
+        display: none;
       }
     }
   </style>
@@ -151,9 +155,11 @@
     <div class="grid-container">
       <div class="report item">
         <div class="report-top-layer">
-          <img class="dp" src="./images/image-jeremy.png" alt="">
-          <div style="margin-top: 32px;">Report for</div>
-          <div style="font-size: 35px;">Jeremy Robson</div>
+          <div><img class="dp" src="./images/image-jeremy.png" alt=""></div>
+          <div>
+            <div style="margin-top: 32px;">Report for</div>
+           <div style="font-size: 35px;">Jeremy Robson</div>
+          </div>
         </div>
         <div class="time-intervals">
           <ul class="time">
@@ -268,4 +274,5 @@
     Coded by <a href="#">Abhishek Biswas</a>.
   </div>
 </body>
+<footer></footer>
 </html>
