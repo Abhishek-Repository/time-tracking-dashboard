@@ -56,19 +56,23 @@
       border-radius: 11px;
       padding-top: 20px;
     }
-    .report-top-layer * {
-      /* padding-left: 10px; */
+    .name-area {
+      margin-top: 32px;
+    }
+    .name {
+      font-size: 35px;
     }
     .time-intervals {
       flex: 2;
-      display: flex;
-      align-items: center;
+      display: block;
     }
     .time {
+      margin: 0px;
       list-style: none;
-    }
-    .time li {
-      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-evenly;
     }
     .dp {
       padding: 0px;
@@ -141,11 +145,68 @@
       align-items: center;
       height: 100vh;
     }
+    .item {
+      display: flex;
+      flex-direction: column;
+      height: 150px;
+      width: 275px;
+      border-radius: 11px;
+    }
+    .report-top-layer {
+      display: flex;
+      flex-direction: row;
+      flex: 2;
+      padding-top: 0px;
+    }
+    .dp {
+      height: 60px;
+      width: 60px;
+    }
+    .image-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .name-area {
+      margin: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .name {
+      font-size: 21px;
+    }
+    .time-intervals{
+      flex: 1;
+      /* display: inline; */
+    }
+    .time {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
       .grid-container {
         grid-template-columns: 1fr;
       }
       .attribution {
         display: none;
+      }
+
+      .record {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .activity-record-time {
+        font-size: 25px;
+        margin-bottom: 8px;
+        font-weight: 300;
+      }
+      .activity-record-prev {
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   </style>
@@ -155,10 +216,10 @@
     <div class="grid-container">
       <div class="report item">
         <div class="report-top-layer">
-          <div><img class="dp" src="./images/image-jeremy.png" alt=""></div>
-          <div>
-            <div style="margin-top: 32px;">Report for</div>
-           <div style="font-size: 35px;">Jeremy Robson</div>
+          <div class="image-area"><img class="dp" src="./images/image-jeremy.png" alt=""></div>
+          <div class="name-area">
+            <div >Report for</div>
+           <div class="name">Jeremy Robson</div>
           </div>
         </div>
         <div class="time-intervals">
@@ -182,7 +243,7 @@
           </div>
           <div class="record">
             <div class="activity-record-time">32.00hrs</div>
-            <div>Last Week - 36hrs</div>
+            <div class="activity-record-prev">Last Week - 36hrs</div>
           </div>
         </div>
       </div>
@@ -198,7 +259,7 @@
           </div>
           <div class="record">
             <div class="activity-record-time">15.00hrs</div>
-            <div>Last Week - 22hrs</div>
+            <div class="activity-record-prev">Last Week - 22hrs</div>
           </div>
         </div>
       </div>
@@ -214,7 +275,7 @@
           </div>
           <div class="record">
             <div class="activity-record-time">31.00hrs</div>
-            <div>Last Week - 33hrs</div>
+            <div class="activity-record-prev">Last Week - 33hrs</div>
           </div>
         </div>
       </div>
@@ -230,7 +291,7 @@
           </div>
           <div class="record">
             <div class="activity-record-time">10.00hrs</div>
-            <div>Last Week - 15hrs</div>
+            <div class="activity-record-prev">Last Week - 15hrs</div>
           </div>
         </div>
       </div>
@@ -246,7 +307,7 @@
           </div>
           <div class="record">
             <div class="activity-record-time">45.00hrs</div>
-            <div>Last Week - 56hrs</div>
+            <div class="activity-record-prev">Last Week - 56hrs</div>
           </div>
         </div>
       </div>
@@ -262,7 +323,7 @@
           </div>
           <div class="record">
             <div class="activity-record-time">14.00hrs</div>
-            <div>Last Week - 18hrs</div>
+            <div class="activity-record-prev">Last Week - 18hrs</div>
           </div>
         </div>
       </div>
