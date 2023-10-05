@@ -85,6 +85,7 @@
       background-color: hsl(235, 46%, 20%);
       border-radius: 9px;
       padding-top: 10px;
+      z-index: 1;
     }
     .top-bar {
       display: flex;
