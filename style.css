@@ -21,6 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 10PX;
 }
 
 .grid-container {
@@ -28,6 +29,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 15px;
+    padding: 15px;
 }
 
 .item {
@@ -37,6 +39,7 @@ body {
     width: 200px;
     background-color: hsl(235, 46%, 20%);
     border-radius: 11px;
+    position: relative;
 }
 
 .item * {
@@ -108,6 +111,12 @@ body {
     border-radius: 9px;
     padding-top: 10px;
     z-index: 1;
+    height: 150px;
+    width: 192px;
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    /* right: 0; */
 }
 
 .top-bar {
@@ -293,6 +302,20 @@ body {
         justify-content: space-between;
     }
 
+    .activity-top-layer {
+        flex: 4;
+        background-color: hsl(235, 46%, 20%);
+        border-radius: 9px;
+        padding-top: 10px;
+        z-index: 1;
+        height: 111px;
+        width: 267px;
+        position: absolute;
+        bottom: -1px;
+        left: -1px;
+        /* right: 0; */
+    }
+    
     .activity-record-time {
         font-size: 25px;
         margin-bottom: 8px;
